@@ -4,6 +4,53 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Cassandra Project</title>
+<div style="
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  height:40px;
+">
+  <span id="teks" style="
+    position:absolute;
+    white-space:nowrap;
+    font-weight:bold;
+    font-size:20px;
+    background:linear-gradient(90deg,#7b61ff,#ffffff,#9c27ff,#ffffff,#7b61ff);
+    background-size:300% auto;
+    -webkit-background-clip:text;
+    color:transparent;
+    animation: warna 3s linear infinite;
+  ">
+    ✨Selamat Datang✨
+  </span>
+</div>
+
+<style>
+@keyframes warna {
+  0% { background-position: 0% center; }
+  100% { background-position: 300% center; }
+}
+</style>
+
+<script>
+const teks = document.getElementById("teks");
+let pos = 0;
+let arah = 1;
+
+function gerak() {
+  const lebar = teks.parentElement.offsetWidth;
+  const teksLebar = teks.offsetWidth;
+  pos += arah * 0.7; // kecepatan
+
+  if (pos + teksLebar >= lebar || pos <= 0) {
+    arah *= -1; // ganti arah saat mentok
+  }
+
+  teks.style.left = pos + "px";
+  requestAnimationFrame(gerak);
+}
+gerak();
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -93,7 +140,7 @@ header p{
 }
 .card img{
   width:100%;
-  height:240px;
+  height:300px;
   object-fit:cover;
 }
 .poem{
@@ -123,25 +170,25 @@ footer{
   <section class="profile">
     <img src="C1.jpg" alt="IM">
     <h2>@Indra M</h2>
-    <p>うまく なりたい</p>
+    <p>う な</p>
+    <p>ま り</p>
+    <p>く た</p>
+    <p>&nbsp;  &nbsp; い</p>
   </section>
 
-  <section class="gallery">
+  
     <div class="card">
-      <img src="https://source.unsplash.com/500x400/?nature,art" alt="karya 1">
-      <div class="poem">Senja berbisik lembut di mataku,\nMengalirkan rindu pada langit ungu.</div>
-    </div>
-    <div class="card">
-      <img src="C2.jpg" alt="karya 2">
-      <div class="poem">Pagi menari di jendela hatiku,\nMembawa harapan baru setiap detik.</div>
-    </div>
-    <div class="card">
-      <img src="C3.jpg" alt="karya 3">
-      <div class="poem">Hujan membasuh jejak langkahku,\nMenyisakan aroma kenangan manis.</div>
+      <img src="C2.jpg" alt="karya pertama">
+      <div class="poem">Bagaikan Langit <br>
+      Aku tersenyum akan sinarnya,
+      Aku menari ditengah hujannya,
+      Aku berlindung dari badainya,
+      Dan Aku akan selalu mencintai nya.</div>
     </div>
   </section>
+  
 
-  <footer>"bahkan dikegelapan terdalam, setitik cahaya dapat menyala dengan terang" — Cassandra</footer>
+  <footer>*note: please bang jangan dihack :(</footer>
 
 </body>
 </html>
