@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cassandra Project</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg1:#002bff;
+  --bg2:#6a5acd;
+  --bg3:#ffffff;
+  --accent:#fff;
+  --card:#ffffff10;
+}
+body{
+  margin:0;
+  min-height:100vh;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3)) fixed;
+  color:var(--accent);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  animation:fadeIn 1s ease-in;
+  overflow-x:hidden;
+  font-family:'Poppins',sans-serif;
+}
+header{
+  text-align:center;
+  padding:40px 0 20px;
+  animation:slideDown 1s ease-out;
+}
+header h1{
+  margin:0;
+  font-size:1.8em;
+  font-family:'Press Start 2P', cursive;
+  letter-spacing:2px;
+  background:linear-gradient(90deg,#fff,var(--bg2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+header p{
+  margin-top:8px;
+  opacity:0.85;
+  font-size:1em;
+}
+
+.profile{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  margin-top:10px;
+}
+.profile img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  border:4px solid rgba(255,255,255,0.6);
+  object-fit:cover;
+  box-shadow:0 4px 15px rgba(0,0,0,0.4);
+}
+.profile h2{
+  margin:14px 0 4px;
+  font-size:1.4em;
+}
+.profile p{
+  font-size:0.9em;
+  opacity:0.9;
+}
+
+/* gallery */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+  margin:20px auto 40px;
+  width:100%;
+  max-width:1000px;
+  padding:0 16px;
+}
+.card{
+  background:var(--card);
+  border-radius:14px;
+  overflow:hidden;
+  backdrop-filter:blur(10px);
+  box-shadow:0 6px 20px rgba(0,0,0,0.3);
+  transition:transform .3s, box-shadow .3s;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+.card img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+}
+.poem{
+  padding:14px;
+  font-size:0.9em;
+  white-space:pre-line;
+  line-height:1.5em;
+  text-align:center;
+}
+
+footer{
+  margin:40px 0 20px;
+  font-size:0.85em;
+  opacity:0.8;
+  text-align:center;
+}
+
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Cassandra Project</h1>
+  </header>
+
+  <section class="profile">
+    <img src="C1.jpg" alt="IM">
+    <h2>@Indra M</h2>
+    <p>うまく なりたい</p>
+  </section>
+
+  <section class="gallery">
+    <div class="card">
+      <img src="https://source.unsplash.com/500x400/?nature,art" alt="karya 1">
+      <div class="poem">Senja berbisik lembut di mataku,\nMengalirkan rindu pada langit ungu.</div>
+    </div>
+    <div class="card">
+      <img src="C2.jpg" alt="karya 2">
+      <div class="poem">Pagi menari di jendela hatiku,\nMembawa harapan baru setiap detik.</div>
+    </div>
+    <div class="card">
+      <img src="C3.jpg" alt="karya 3">
+      <div class="poem">Hujan membasuh jejak langkahku,\nMenyisakan aroma kenangan manis.</div>
+    </div>
+  </section>
+
+  <footer>"bahkan dikegelapan terdalam, setitik cahaya dapat menyala dengan terang" — Cassandra</footer>
+
+</body>
+</html>
